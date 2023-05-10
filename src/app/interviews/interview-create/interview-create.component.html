@@ -1,0 +1,7 @@
+<form #interviewForm="ngForm" (submit)="OnSubmit(interviewForm)">
+
+<input type="text" required="required" placeholder="Enter name" [(ngModel)]="interview.name"  name="name">
+<input type="number" required="required" placeholder="Enter interviewRnd" [(ngModel)]="interview.interviewRound" name="interviewRnd">
+
+  <button type="submit" [disabled]="!interviewForm.valid">Submit</button>
+</form> 
